@@ -37,14 +37,18 @@ Zodiac signs, planets, lunar phases, houses, aspects and more — free for perso
 
 ## What's inside
 
-| | Free _(this repo)_ | Pro |
+| | Free _(this repo)_ | Pro _(for purchase)_ |
 | --- | --- | --- |
 | Symbols | **55** | **101** |
-| Format | SVG (+ PNG on the site) | SVG, PNG **and** installable fonts |
+| Format | SVG ¹ | SVG, PNG **and** installable fonts |
 | Font variants | Sans-serif · Regular | Sans + Slab × Light / Regular / Bold (6) |
 | Theming | `currentColor`-ready | `currentColor` + `font-*` |
 | License | SIL OFL 1.1 | Pro extended license (EULA) |
 | Use | Personal **&** commercial | Personal **&** commercial |
+
+> ¹ This repository ships the free symbols as **SVG only**. Free **PNG** rasters are not
+> included here — they are available exclusively via the download dialog on
+> **[zodiacfonts.com](https://www.zodiacfonts.com)**.
 
 Every SVG is normalized to a `0 0 512 512` viewBox and drawn with
 `fill="none" stroke="currentColor"`, so it inherits color from CSS out of the box.
