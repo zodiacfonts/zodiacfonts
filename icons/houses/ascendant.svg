@@ -1,0 +1,11 @@
+<!--
+  Zodiac Fonts — © 2025 Zodiac Fonts (https://zodiacfonts.com)
+  Licensed under the SIL Open Font License 1.1 (OFL).
+  Free for personal and commercial use with attribution.
+-->
+<svg class="zf-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+      <path  d="M244.357,201.822C262.868,220.726,289.305,222.671,306.535,211.298  320.886,201.822,330.462,173.391,316.111,159.188S282.634,144.985,263.483,135.508  243.791,99.102,253.908,83.397C265.674,65.157,297.526,59.446,320.886,78.671" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/>
+      <path  d="M445.046,81.403C440.591,71.902,426.782,66.929,412.898,66.683  389.76,66.289,377.822,87.286,370.511,108.406  359.828,139.274,364.825,188.357,387.298,207.754  412.382,229.415,438.129,213.366,443.003,199.286" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/>
+        <polyline  points="252.972 445.538 226.142 338.658 157.834 66.462 93.243 335.902 66.954 445.538" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/>
+        <line  x1="91.003" y1="364.037" x2="230.006" y2="364.037" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/>
+</svg>

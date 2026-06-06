@@ -1,0 +1,10 @@
+<!--
+  Zodiac Fonts — © 2025 Zodiac Fonts (https://zodiacfonts.com)
+  Licensed under the SIL Open Font License 1.1 (OFL).
+  Free for personal and commercial use with attribution.
+-->
+<svg class="zf-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+        <path  d="M66.462,357.243L161.649,357.243S83.914,297.994,83.914,206.425S162.782,66.56,254.105,66.462" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/>
+        <path  d="M445.538,357.243L346.363,357.243S424.098,297.994,424.098,206.425S345.255,66.56,253.932,66.462" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/>
+      <line  x1="66.462" y1="445.538" x2="445.538" y2="445.538" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/>
+</svg>

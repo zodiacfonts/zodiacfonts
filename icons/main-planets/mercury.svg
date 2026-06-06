@@ -1,0 +1,11 @@
+<!--
+  Zodiac Fonts — © 2025 Zodiac Fonts (https://zodiacfonts.com)
+  Licensed under the SIL Open Font License 1.1 (OFL).
+  Free for personal and commercial use with attribution.
+-->
+<svg class="zf-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+        <ellipse  cx="255.206" cy="212.058" rx="97.618" ry="98.948" stroke-miterlimit="10" fill="none" stroke="currentColor" stroke-width="32"/>
+        <line  x1="255.206" y1="450.147" x2="255.206" y2="311.006" fill="none" stroke="currentColor" stroke-width="32" stroke-linecap="round" stroke-linejoin="round"/>
+        <path  d="M157.68,61.853S239.395,177.554,354.413,61.853" fill="none" stroke="currentColor" stroke-width="32" stroke-linecap="round" stroke-linejoin="round"/>
+      <line  x1="190.244" y1="371.831" x2="319.687" y2="371.831" fill="none" stroke="currentColor" stroke-width="32" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
