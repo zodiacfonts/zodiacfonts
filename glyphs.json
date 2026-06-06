@@ -1,0 +1,396 @@
+{
+  "name": "Zodiac Fonts — Free symbols",
+  "tier": "free",
+  "license": "OFL-1.1",
+  "website": "https://www.zodiacfonts.com",
+  "documentation": "https://www.zodiacfonts.com/documentation",
+  "count": 55,
+  "note": "`reference` maps to the source asset filename; `slug` is the clean filename used in this repo; `codepoint` is the Private Use Area code point the font maps the glyph to; `file` is the repo-relative SVG path.",
+  "glyphs": [
+    {
+      "name": "Aries",
+      "reference": "aries",
+      "slug": "aries",
+      "codepoint": "E000",
+      "file": "icons/signs/aries.svg"
+    },
+    {
+      "name": "Taurus",
+      "reference": "taurus",
+      "slug": "taurus",
+      "codepoint": "E005",
+      "file": "icons/signs/taurus.svg"
+    },
+    {
+      "name": "Gemini",
+      "reference": "gemini",
+      "slug": "gemini",
+      "codepoint": "E009",
+      "file": "icons/signs/gemini.svg"
+    },
+    {
+      "name": "Cancer",
+      "reference": "cancer",
+      "slug": "cancer",
+      "codepoint": "E001",
+      "file": "icons/signs/cancer.svg"
+    },
+    {
+      "name": "Leo",
+      "reference": "leo",
+      "slug": "leo",
+      "codepoint": "E006",
+      "file": "icons/signs/leo.svg"
+    },
+    {
+      "name": "Virgo",
+      "reference": "virgo",
+      "slug": "virgo",
+      "codepoint": "E00A",
+      "file": "icons/signs/virgo.svg"
+    },
+    {
+      "name": "Libra",
+      "reference": "libra",
+      "slug": "libra",
+      "codepoint": "E002",
+      "file": "icons/signs/libra.svg"
+    },
+    {
+      "name": "Scorpio",
+      "reference": "scorpio",
+      "slug": "scorpio",
+      "codepoint": "E007",
+      "file": "icons/signs/scorpio.svg"
+    },
+    {
+      "name": "Sagittarius",
+      "reference": "sagittarius",
+      "slug": "sagittarius",
+      "codepoint": "E00B",
+      "file": "icons/signs/sagittarius.svg"
+    },
+    {
+      "name": "Capricorn",
+      "reference": "capricorn-2",
+      "slug": "capricorn",
+      "codepoint": "E004",
+      "file": "icons/signs/capricorn.svg"
+    },
+    {
+      "name": "Aquarius",
+      "reference": "aquarius",
+      "slug": "aquarius",
+      "codepoint": "E008",
+      "file": "icons/signs/aquarius.svg"
+    },
+    {
+      "name": "Pisces",
+      "reference": "pisces",
+      "slug": "pisces",
+      "codepoint": "E00C",
+      "file": "icons/signs/pisces.svg"
+    },
+    {
+      "name": "Sun",
+      "reference": "sun",
+      "slug": "sun",
+      "codepoint": "E101",
+      "file": "icons/main-planets/sun.svg"
+    },
+    {
+      "name": "Moon",
+      "reference": "moon",
+      "slug": "moon",
+      "codepoint": "E102",
+      "file": "icons/main-planets/moon.svg"
+    },
+    {
+      "name": "Mercury",
+      "reference": "mercury",
+      "slug": "mercury",
+      "codepoint": "E103",
+      "file": "icons/main-planets/mercury.svg"
+    },
+    {
+      "name": "Venus",
+      "reference": "venus",
+      "slug": "venus",
+      "codepoint": "E104",
+      "file": "icons/main-planets/venus.svg"
+    },
+    {
+      "name": "Earth",
+      "reference": "earth",
+      "slug": "earth",
+      "codepoint": "E100",
+      "file": "icons/main-planets/earth.svg"
+    },
+    {
+      "name": "Mars",
+      "reference": "mars",
+      "slug": "mars",
+      "codepoint": "E105",
+      "file": "icons/main-planets/mars.svg"
+    },
+    {
+      "name": "Jupiter",
+      "reference": "jupiter",
+      "slug": "jupiter",
+      "codepoint": "E106",
+      "file": "icons/main-planets/jupiter.svg"
+    },
+    {
+      "name": "Saturn",
+      "reference": "saturn",
+      "slug": "saturn",
+      "codepoint": "E107",
+      "file": "icons/main-planets/saturn.svg"
+    },
+    {
+      "name": "Uranus",
+      "reference": "uranus-1",
+      "slug": "uranus",
+      "codepoint": "E108",
+      "file": "icons/main-planets/uranus.svg"
+    },
+    {
+      "name": "Neptune",
+      "reference": "neptune",
+      "slug": "neptune",
+      "codepoint": "E10A",
+      "file": "icons/main-planets/neptune.svg"
+    },
+    {
+      "name": "Pluto",
+      "reference": "pluto-1",
+      "slug": "pluto",
+      "codepoint": "E10B",
+      "file": "icons/main-planets/pluto.svg"
+    },
+    {
+      "name": "New moon",
+      "reference": "new-moon",
+      "slug": "new-moon",
+      "codepoint": "E204",
+      "file": "icons/lunar/new-moon.svg"
+    },
+    {
+      "name": "Waxing crescent",
+      "reference": "waxing-crescent",
+      "slug": "waxing-crescent",
+      "codepoint": "E205",
+      "file": "icons/lunar/waxing-crescent.svg"
+    },
+    {
+      "name": "First quarter",
+      "reference": "first-quarter",
+      "slug": "first-quarter",
+      "codepoint": "E206",
+      "file": "icons/lunar/first-quarter.svg"
+    },
+    {
+      "name": "Waxing gibbous",
+      "reference": "waxing-gibbous",
+      "slug": "waxing-gibbous",
+      "codepoint": "E207",
+      "file": "icons/lunar/waxing-gibbous.svg"
+    },
+    {
+      "name": "Full moon",
+      "reference": "full-moon",
+      "slug": "full-moon",
+      "codepoint": "E208",
+      "file": "icons/lunar/full-moon.svg"
+    },
+    {
+      "name": "Waning gibbous",
+      "reference": "waning-gibbous",
+      "slug": "waning-gibbous",
+      "codepoint": "E209",
+      "file": "icons/lunar/waning-gibbous.svg"
+    },
+    {
+      "name": "Last quarter",
+      "reference": "last-quarter",
+      "slug": "last-quarter",
+      "codepoint": "E20A",
+      "file": "icons/lunar/last-quarter.svg"
+    },
+    {
+      "name": "Waning crescent",
+      "reference": "waning-crescent",
+      "slug": "waning-crescent",
+      "codepoint": "E20B",
+      "file": "icons/lunar/waning-crescent.svg"
+    },
+    {
+      "name": "North node",
+      "reference": "north-node",
+      "slug": "north-node",
+      "codepoint": "E300",
+      "file": "icons/celestial-points/north-node.svg"
+    },
+    {
+      "name": "South node",
+      "reference": "south-node",
+      "slug": "south-node",
+      "codepoint": "E301",
+      "file": "icons/celestial-points/south-node.svg"
+    },
+    {
+      "name": "Lilith",
+      "reference": "lilith",
+      "slug": "lilith",
+      "codepoint": "E302",
+      "file": "icons/celestial-points/lilith.svg"
+    },
+    {
+      "name": "Chiron",
+      "reference": "chiron",
+      "slug": "chiron",
+      "codepoint": "E401",
+      "file": "icons/dwarf-planets-and-asteroids/chiron.svg"
+    },
+    {
+      "name": "First house",
+      "reference": "house-one",
+      "slug": "house-one",
+      "codepoint": "E500",
+      "file": "icons/houses/house-one.svg"
+    },
+    {
+      "name": "Second house",
+      "reference": "house-two",
+      "slug": "house-two",
+      "codepoint": "E501",
+      "file": "icons/houses/house-two.svg"
+    },
+    {
+      "name": "Third house",
+      "reference": "house-three",
+      "slug": "house-three",
+      "codepoint": "E502",
+      "file": "icons/houses/house-three.svg"
+    },
+    {
+      "name": "Fourth house",
+      "reference": "house-four",
+      "slug": "house-four",
+      "codepoint": "E503",
+      "file": "icons/houses/house-four.svg"
+    },
+    {
+      "name": "Fifth house",
+      "reference": "house-five",
+      "slug": "house-five",
+      "codepoint": "E504",
+      "file": "icons/houses/house-five.svg"
+    },
+    {
+      "name": "Sixth house",
+      "reference": "house-six",
+      "slug": "house-six",
+      "codepoint": "E505",
+      "file": "icons/houses/house-six.svg"
+    },
+    {
+      "name": "Seventh house",
+      "reference": "house-seven",
+      "slug": "house-seven",
+      "codepoint": "E506",
+      "file": "icons/houses/house-seven.svg"
+    },
+    {
+      "name": "Eighth house",
+      "reference": "house-eight",
+      "slug": "house-eight",
+      "codepoint": "E507",
+      "file": "icons/houses/house-eight.svg"
+    },
+    {
+      "name": "Ninth house",
+      "reference": "house-nine",
+      "slug": "house-nine",
+      "codepoint": "E508",
+      "file": "icons/houses/house-nine.svg"
+    },
+    {
+      "name": "Tenth house",
+      "reference": "house-ten",
+      "slug": "house-ten",
+      "codepoint": "E509",
+      "file": "icons/houses/house-ten.svg"
+    },
+    {
+      "name": "Eleventh house",
+      "reference": "house-eleven",
+      "slug": "house-eleven",
+      "codepoint": "E50A",
+      "file": "icons/houses/house-eleven.svg"
+    },
+    {
+      "name": "Twelfth house",
+      "reference": "house-twelve",
+      "slug": "house-twelve",
+      "codepoint": "E50B",
+      "file": "icons/houses/house-twelve.svg"
+    },
+    {
+      "name": "Ascendant",
+      "reference": "ascendant",
+      "slug": "ascendant",
+      "codepoint": "E50C",
+      "file": "icons/houses/ascendant.svg"
+    },
+    {
+      "name": "Medium coeli",
+      "reference": "medium-coeli",
+      "slug": "medium-coeli",
+      "codepoint": "E50D",
+      "file": "icons/houses/medium-coeli.svg"
+    },
+    {
+      "name": "Conjunction",
+      "reference": "conjunction",
+      "slug": "conjunction",
+      "codepoint": "E600",
+      "file": "icons/major-aspects/conjunction.svg"
+    },
+    {
+      "name": "Opposition",
+      "reference": "opposition",
+      "slug": "opposition",
+      "codepoint": "E601",
+      "file": "icons/major-aspects/opposition.svg"
+    },
+    {
+      "name": "Square",
+      "reference": "square",
+      "slug": "square",
+      "codepoint": "E602",
+      "file": "icons/major-aspects/square.svg"
+    },
+    {
+      "name": "Trine",
+      "reference": "trine",
+      "slug": "trine",
+      "codepoint": "E603",
+      "file": "icons/major-aspects/trine.svg"
+    },
+    {
+      "name": "Sextile",
+      "reference": "sextile",
+      "slug": "sextile",
+      "codepoint": "E604",
+      "file": "icons/major-aspects/sextile.svg"
+    },
+    {
+      "name": "Retrograde",
+      "reference": "retrograde",
+      "slug": "retrograde",
+      "codepoint": "E901",
+      "file": "icons/movements/retrograde.svg"
+    }
+  ]
+}

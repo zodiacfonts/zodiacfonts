@@ -1,0 +1,11 @@
+<!--
+  Zodiac Fonts — © 2025 Zodiac Fonts (https://zodiacfonts.com)
+  Licensed under the SIL Open Font License 1.1 (OFL).
+  Free for personal and commercial use with attribution.
+-->
+<svg class="zf-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+        <path  d="M445.538,222.178C445.538,264.049,411.126,297.994,368.689,297.994S291.84,264.049,291.84,222.178  326.252,146.363,368.689,146.363C388.554,146.363,406.671,153.797,420.308,166.006  435.791,179.865,445.538,199.902,445.538,222.178Z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="32"/>
+        <path  d="M419.914,166.031S269.415,35.175,66.462,166.031" fill="none" stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="32"/>
+        <path  d="M66.462,289.822C66.462,247.951,100.874,214.006,143.311,214.006  185.748,214.006,220.16,247.951,220.16,289.822S185.748,365.637,143.311,365.637C123.446,365.637,105.329,358.203,91.692,345.994  76.209,332.135,66.462,312.098,66.462,289.822Z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="32"/>
+        <path  d="M92.086,345.994S242.609,476.849,445.538,345.994" fill="none" stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="32"/>
+</svg>

@@ -1,0 +1,7 @@
+# Code owners for the public `zodiacfonts` repository.
+# Every change requires review/approval from the owner(s) below.
+# Use a team like @zodiacfonts/maintainers instead if you add collaborators later.
+#
+# Copy this file into the public repo as `.github/CODEOWNERS`.
+
+* @GitAttila
