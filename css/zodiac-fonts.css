@@ -1,0 +1,150 @@
+/*!
+ * Zodiac Fonts — free astrology icon font (55 free + 46 PRO stubs)
+ * SIL Open Font License 1.1 · https://www.zodiacfonts.com
+ * Generated from glyphs.json — do not edit by hand.
+ */
+@font-face {
+  font-family: 'Zodiac Fonts';
+  src: url('../fonts/ZodiacFontFREE.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: block;
+  unicode-range: U+E000, U+E001, U+E002, U+E004, U+E005, U+E006, U+E007, U+E008, U+E009, U+E00A, U+E00B, U+E00C, U+E100, U+E101, U+E102, U+E103, U+E104, U+E105, U+E106, U+E107, U+E108, U+E10A, U+E10B, U+E204, U+E205, U+E206, U+E207, U+E208, U+E209, U+E20A, U+E20B, U+E300, U+E301, U+E302, U+E401, U+E500, U+E501, U+E502, U+E503, U+E504, U+E505, U+E506, U+E507, U+E508, U+E509, U+E50A, U+E50B, U+E50C, U+E50D, U+E600, U+E601, U+E602, U+E603, U+E604, U+E901;
+}
+
+.zf {
+  font-family: 'Zodiac Fonts';
+  font-style: normal;
+  font-weight: 400;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  display: inline-block;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.zf-aries::before { content: "\e000"; }
+.zf-cancer::before { content: "\e001"; }
+.zf-libra::before { content: "\e002"; }
+.zf-capricorn::before { content: "\e004"; }
+.zf-taurus::before { content: "\e005"; }
+.zf-leo::before { content: "\e006"; }
+.zf-scorpio::before { content: "\e007"; }
+.zf-aquarius::before { content: "\e008"; }
+.zf-gemini::before { content: "\e009"; }
+.zf-virgo::before { content: "\e00a"; }
+.zf-sagittarius::before { content: "\e00b"; }
+.zf-pisces::before { content: "\e00c"; }
+
+.zf-earth::before { content: "\e100"; }
+.zf-sun::before { content: "\e101"; }
+.zf-moon::before { content: "\e102"; }
+.zf-mercury::before { content: "\e103"; }
+.zf-venus::before { content: "\e104"; }
+.zf-mars::before { content: "\e105"; }
+.zf-jupiter::before { content: "\e106"; }
+.zf-saturn::before { content: "\e107"; }
+.zf-uranus::before { content: "\e108"; }
+.zf-neptune::before { content: "\e10a"; }
+.zf-pluto::before { content: "\e10b"; }
+
+.zf-new-moon::before { content: "\e204"; }
+.zf-waxing-crescent::before { content: "\e205"; }
+.zf-first-quarter::before { content: "\e206"; }
+.zf-waxing-gibbous::before { content: "\e207"; }
+.zf-full-moon::before { content: "\e208"; }
+.zf-waning-gibbous::before { content: "\e209"; }
+.zf-last-quarter::before { content: "\e20a"; }
+.zf-waning-crescent::before { content: "\e20b"; }
+
+.zf-north-node::before { content: "\e300"; }
+.zf-south-node::before { content: "\e301"; }
+.zf-lilith::before { content: "\e302"; }
+
+.zf-chiron::before { content: "\e401"; }
+
+.zf-house-one::before { content: "\e500"; }
+.zf-house-two::before { content: "\e501"; }
+.zf-house-three::before { content: "\e502"; }
+.zf-house-four::before { content: "\e503"; }
+.zf-house-five::before { content: "\e504"; }
+.zf-house-six::before { content: "\e505"; }
+.zf-house-seven::before { content: "\e506"; }
+.zf-house-eight::before { content: "\e507"; }
+.zf-house-nine::before { content: "\e508"; }
+.zf-house-ten::before { content: "\e509"; }
+.zf-house-eleven::before { content: "\e50a"; }
+.zf-house-twelve::before { content: "\e50b"; }
+.zf-ascendant::before { content: "\e50c"; }
+.zf-medium-coeli::before { content: "\e50d"; }
+
+.zf-conjunction::before { content: "\e600"; }
+.zf-opposition::before { content: "\e601"; }
+.zf-square::before { content: "\e602"; }
+.zf-trine::before { content: "\e603"; }
+.zf-sextile::before { content: "\e604"; }
+
+.zf-retrograde::before { content: "\e901"; }
+
+/* ─── PRO glyphs ─────────────────────────────────────────────────────────────
+   These classes are part of the full Zodiac Fonts API. They will NOT render
+   with the free font — the FREE font only covers the 55 codepoints above.
+   To display PRO glyphs, purchase a Pro license and self-host ZodiacFontPRO.woff2.
+   → https://www.zodiacfonts.com/documentation
+   ─────────────────────────────────────────────────────────────────────────── */
+
+.zf-capricorn-1::before { content: "\e003"; } /* PRO */
+.zf-ophiuchus::before { content: "\e00d"; } /* PRO */
+.zf-sign-cardinal::before { content: "\e00e"; } /* PRO */
+.zf-sign-fixed::before { content: "\e00f"; } /* PRO */
+.zf-sign-mutable::before { content: "\e010"; } /* PRO */
+
+.zf-uranus-2::before { content: "\e109"; } /* PRO */
+.zf-pluto-2::before { content: "\e10c"; } /* PRO */
+
+.zf-solar-eclipse-1::before { content: "\e200"; } /* PRO */
+.zf-lunar-eclipse-1::before { content: "\e201"; } /* PRO */
+.zf-solar-eclipse-2::before { content: "\e202"; } /* PRO */
+.zf-lunar-eclipse-2::before { content: "\e203"; } /* PRO */
+
+.zf-wheel-of-fortune::before { content: "\e303"; } /* PRO */
+.zf-vertex::before { content: "\e304"; } /* PRO */
+
+.zf-ceres::before { content: "\e400"; } /* PRO */
+.zf-pallas::before { content: "\e402"; } /* PRO */
+.zf-juno::before { content: "\e403"; } /* PRO */
+.zf-vesta-1::before { content: "\e404"; } /* PRO */
+.zf-vesta-2::before { content: "\e405"; } /* PRO */
+.zf-comet::before { content: "\e406"; } /* PRO */
+.zf-sedna::before { content: "\e407"; } /* PRO */
+.zf-makemake::before { content: "\e408"; } /* PRO */
+.zf-haumea::before { content: "\e409"; } /* PRO */
+.zf-proserpine::before { content: "\e40a"; } /* PRO */
+.zf-hygiea::before { content: "\e40b"; } /* PRO */
+.zf-eris-1::before { content: "\e40c"; } /* PRO */
+.zf-eris-2::before { content: "\e40d"; } /* PRO */
+
+.zf-imum-coeli::before { content: "\e50e"; } /* PRO */
+.zf-descendant::before { content: "\e50f"; } /* PRO */
+
+.zf-semi-sextile::before { content: "\e700"; } /* PRO */
+.zf-inconjunct::before { content: "\e701"; } /* PRO */
+.zf-semi-square::before { content: "\e702"; } /* PRO */
+.zf-septile::before { content: "\e703"; } /* PRO */
+.zf-sesquiquadrate::before { content: "\e704"; } /* PRO */
+.zf-quintile-2::before { content: "\e705"; } /* PRO */
+.zf-quintile::before { content: "\e706"; } /* PRO */
+.zf-biquintile::before { content: "\e707"; } /* PRO */
+.zf-biquintile-2::before { content: "\e708"; } /* PRO */
+.zf-novile::before { content: "\e709"; } /* PRO */
+.zf-parallel::before { content: "\e70a"; } /* PRO */
+.zf-contra-parallel::before { content: "\e70b"; } /* PRO */
+.zf-decile::before { content: "\e70c"; } /* PRO */
+
+.zf-element-fire::before { content: "\e800"; } /* PRO */
+.zf-element-air::before { content: "\e801"; } /* PRO */
+.zf-element-earth::before { content: "\e802"; } /* PRO */
+.zf-element-water::before { content: "\e803"; } /* PRO */
+
+.zf-direct::before { content: "\e900"; } /* PRO */

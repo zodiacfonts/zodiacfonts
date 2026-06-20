@@ -27,6 +27,7 @@ Zodiac signs, planets, lunar phases, houses, aspects and more — free for perso
 - [What's inside](#whats-inside)
 - [Installation](#installation)
 - [Usage](#usage)
+- [Icon font](#icon-font)
 - [Theming with `currentColor`](#theming-with-currentcolor)
 - [Folder structure](#folder-structure)
 - [The manifest (`glyphs.json`)](#the-manifest-glyphsjson)
@@ -59,7 +60,21 @@ Every SVG is normalized to a `0 0 512 512` viewBox and drawn with
 
 ```bash
 npm install zodiacfonts
-# symbols are then available under node_modules/zodiacfonts/icons/<category>/<name>.svg
+```
+
+Then reference icons by their package path — no manual file copying needed:
+
+```js
+// Vite / webpack / Rollup
+import ariesUrl from 'zodiacfonts/icons/signs/aries.svg';
+
+// React + SVGR (renders as a component)
+import AriesIcon from 'zodiacfonts/icons/signs/aries.svg?react';
+
+// Node.js / SSR (resolve the file path)
+import { createRequire } from 'node:module';
+const require = createRequire(import.meta.url);
+const ariesPath = require.resolve('zodiacfonts/icons/signs/aries.svg');
 ```
 
 **Download / clone** (recommended for static sites)
@@ -73,6 +88,9 @@ git clone https://github.com/zodiacfonts/zodiacfonts.git
 from [`icons/`](./icons).
 
 ## Usage
+
+> Paths below use the repo-relative form (`icons/signs/aries.svg`) — substitute
+> `zodiacfonts/icons/signs/aries.svg` when referencing from an npm install.
 
 ### As an image
 
@@ -110,9 +128,82 @@ export const Aries = () => <img src={ariesUrl} alt="Aries" width={48} height={48
 <img src="assets/zodiac/signs/aries.svg" alt="Aries" width="48" height="48" />
 ```
 
-## Theming with `currentColor`
+## Icon font
 
-Because the strokes use `currentColor`, an **inlined** SVG follows the CSS `color` property:
+Zodiac Fonts ships an optional icon font layer alongside the SVGs, letting you render glyphs with
+a single HTML class — no image files or inline SVG required.
+
+### Quick start (CDN)
+
+```html
+<!-- Add to your <head> — the font + all glyph classes load automatically -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/zodiacfonts@latest/css/zodiac-fonts.min.css" />
+
+<!-- Render a glyph -->
+<i class="zf zf-aries" aria-hidden="true"></i>
+<span class="zf zf-moon" aria-label="Moon"></span>
+```
+
+### Quick start (npm / self-hosted)
+
+```bash
+npm install zodiacfonts
+```
+
+```js
+// Bundler (Vite, webpack, etc.) — plain CSS
+import 'zodiacfonts/css';
+
+// Sass / SCSS projects — override font path if needed
+// $zf-font-path: '/your/assets/ZodiacFontFREE.woff2';
+@use 'zodiacfonts/scss';
+```
+
+Or copy `css/zodiac-fonts.min.css` and the `fonts/` folder to your project and link the CSS manually.
+
+### FREE vs PRO glyphs
+
+The stylesheet ships CSS classes for **all 101 glyphs** — the 55 FREE ones and the 46 PRO stubs.
+FREE classes render immediately. PRO classes (marked `/* PRO */` in the source CSS) require
+a Pro license and `ZodiacFontPRO.woff2` to be self-hosted alongside `ZodiacFontFREE.woff2`.
+
+See [zodiacfonts.com/documentation](https://www.zodiacfonts.com/documentation) for the Pro
+integration guide, character map, and live preview of all 101 glyphs.
+
+### PRO usage detector
+
+Include the optional checker script to get a browser console warning whenever a PRO glyph
+class is used without the PRO font loaded. **No code needed** — it runs automatically.
+
+```html
+<!-- plain HTML / SSG — add after your CSS link, runs on DOMContentLoaded -->
+<script type="module" src="https://cdn.jsdelivr.net/npm/zodiacfonts@latest/js/zodiac-fonts.min.js"></script>
+```
+
+```js
+// SPA (React, Vue, Angular) — call inside your mount lifecycle
+import { checkZodiacGlyphs } from 'zodiacfonts/js';
+
+// React
+useEffect(() => { checkZodiacGlyphs(); }, []);
+
+// Vue
+onMounted(() => checkZodiacGlyphs());
+
+// Angular
+ngOnInit() { checkZodiacGlyphs(); }
+```
+
+When a PRO glyph is detected the console shows:
+
+```
+[Zodiac Fonts] PRO glyph detected: .zf-ophiuchus
+  This glyph requires a Pro license — it will not render with the FREE font.
+  Self-host ZodiacFontPRO.woff2 after purchasing a Pro license.
+  → https://www.zodiacfonts.com/documentation
+```
+
+## Theming with `currentColor`
 
 ```css
 .zodiac-icon { color: rebeccapurple; }
@@ -138,6 +229,8 @@ Sizing is just `width` / `height` (or `font-size` when inlined and using `1em` d
 
 ```
 zodiacfonts/
+├── fonts/
+│   └── ZodiacFontFREE.woff2         icon font (FREE codepoints only)
 ├── icons/
 │   ├── signs/                       aries.svg, taurus.svg, … (12)
 │   ├── main-planets/                sun.svg, moon.svg, … (11)
@@ -147,6 +240,14 @@ zodiacfonts/
 │   ├── houses/                      house-one.svg … medium-coeli.svg (14)
 │   ├── major-aspects/               conjunction.svg, trine.svg, … (5)
 │   └── movements/                   retrograde.svg (1)
+├── css/
+│   ├── zodiac-fonts.css             icon font CSS (FREE rules + PRO stubs)
+│   └── zodiac-fonts.min.css         minified (recommended for production)
+├── js/
+│   ├── zodiac-fonts.js              ES module companion script
+│   └── zodiac-fonts.min.js          minified
+├── scss/
+│   └── zodiac-fonts.scss            Sass source with $zf-* override variables
 ├── glyphs.json                      machine-readable manifest of all 55 symbols
 ├── OFL.txt                          SIL Open Font License 1.1
 ├── package.json
