@@ -1,6 +1,6 @@
 {
   "name": "zodiacfonts",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Free astrology icons & symbols — 55 hand-crafted, currentColor-ready SVG glyphs (zodiac signs, planets, houses, aspects, lunar phases). Part of Zodiac Fonts.",
   "keywords": [
     "astrology",
@@ -43,7 +43,9 @@
     "./css/min": "./css/zodiac-fonts.min.css",
     "./js": "./js/zodiac-fonts.js",
     "./scss": "./scss/zodiac-fonts.scss",
-    "./glyphs.json": "./glyphs.json"
+    "./glyphs.json": "./glyphs.json",
+    "./icons/*": "./icons/*",
+    "./fonts/*": "./fonts/*"
   },
   "sideEffects": [
     "**/*.css",
