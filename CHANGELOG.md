@@ -6,6 +6,15 @@ Versioning follows [Semantic Versioning](https://semver.org/).
 
 ---
 
+## [1.1.1] — 2026-06-20
+
+### Fixed
+- Added `./icons/*` and `./fonts/*` wildcard subpath exports to `package.json`.
+  Bundlers with strict ESM `exports` enforcement (Vite, webpack 5, Rollup) now
+  resolve `import url from 'zodiacfonts/icons/signs/aries.svg'` correctly.
+
+---
+
 ## [1.1.0] — 2026-06-20
 
 ### Added
