@@ -161,6 +161,30 @@ import 'zodiacfonts/css';
 
 Or copy `css/zodiac-fonts.min.css` and the `fonts/` folder to your project and link the CSS manually.
 
+#### Framework notes (icon font)
+
+**Vite-based stacks (React, Vue, Next.js, Nuxt, SvelteKit, etc.)** — the bundler resolves and
+copies the `.woff2` from `node_modules` automatically. No extra configuration needed.
+
+**Angular** — the Angular CLI build does not serve files from `node_modules` at runtime.
+The SCSS will compile without errors but the font silently 404s. Fix it by adding an asset
+glob to `angular.json`:
+
+```json
+{
+  "glob": "ZodiacFontFREE.woff2",
+  "input": "node_modules/zodiacfonts/fonts",
+  "output": "assets/zodiacfonts"
+}
+```
+
+Then override the font path in your SCSS **before** the `@use`:
+
+```scss
+$zf-font-path: '/assets/zodiacfonts/ZodiacFontFREE.woff2';
+@use 'zodiacfonts/scss';
+```
+
 ### FREE vs PRO glyphs
 
 The stylesheet ships CSS classes for **all 101 glyphs** — the 55 FREE ones and the 46 PRO stubs.
@@ -272,40 +296,60 @@ code point used by the icon font) and `file` (repo path).
 
 ## Categories
 
-| Category | Free symbols |
-| --- | ---: |
-| Signs | 12 |
-| Main planets | 11 |
-| Lunar phases | 8 |
-| Celestial points | 3 |
-| Dwarf planets & asteroids | 1 |
-| Houses | 14 |
-| Major aspects | 5 |
-| Movements | 1 |
-| **Total** | **55** |
+| Category | Free | Pro | Notes |
+| --- | ---: | ---: | --- |
+| Zodiac Signs | 12 | 5 | Capricorn has two design variants (Modern · Traditional) |
+| Main Planets | 11 | 2 | Uranus & Pluto each have two design variants |
+| Lunar Symbols | 8 | 4 | Solar & Lunar eclipse (Diagram + Symbolic styles) |
+| Celestial Points | 3 | 2 | |
+| Dwarf Planets & Asteroids | 1 | 13 | |
+| Astrological Houses | 14 | 2 | |
+| Major Aspects | 5 | 0 | All free |
+| Minor Aspects | 0 | 13 | |
+| Classical Elements | 0 | 4 | |
+| Planetary Movements | 1 | 1 | |
+| **Total** | **55** | **46** | **101 symbols total** |
 
 <details>
-<summary>Full list of free symbols</summary>
+<summary>Full list of free symbols (55)</summary>
 
-- **Signs** — aries, taurus, gemini, cancer, leo, virgo, libra, scorpio, sagittarius, capricorn, aquarius, pisces
-- **Main planets** — sun, moon, mercury, venus, earth, mars, jupiter, saturn, uranus, neptune, pluto
-- **Lunar** — new-moon, waxing-crescent, first-quarter, waxing-gibbous, full-moon, waning-gibbous, last-quarter, waning-crescent
-- **Celestial points** — north-node, south-node, lilith
-- **Dwarf planets & asteroids** — chiron
-- **Houses** — house-one … house-twelve, ascendant, medium-coeli
-- **Major aspects** — conjunction, opposition, square, trine, sextile
-- **Movements** — retrograde
+- **Zodiac Signs (12)** — Aries, Taurus, Gemini, Cancer, Leo, Virgo, Libra, Scorpio, Sagittarius, Capricorn (Modern style), Aquarius, Pisces
+- **Main Planets (11)** — Sun, Moon, Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus (Modern style), Neptune, Pluto (Traditional style)
+- **Lunar Symbols (8)** — New moon, Waxing crescent, First quarter, Waxing gibbous, Full moon, Waning gibbous, Last quarter, Waning crescent
+- **Celestial Points (3)** — North node, South node, Lilith
+- **Dwarf Planets & Asteroids (1)** — Chiron
+- **Astrological Houses (14)** — House One, House Two, House Three, House Four, House Five, House Six, House Seven, House Eight, House Nine, House Ten, House Eleven, House Twelve, Ascendant, Medium Coeli
+- **Major Aspects (5)** — Conjunction, Opposition, Square, Trine, Sextile
+- **Planetary Movements (1)** — Retrograde
 
 </details>
 
-> Premium symbols (elements, minor aspects, extra asteroids, lunar/solar eclipses and more)
-> are part of **Pro** and are intentionally not included here.
+<details>
+<summary>Full list of Pro symbols (46)</summary>
+
+- **Zodiac Signs (5)** — Capricorn (Traditional style), Ophiuchus (13th sign), Cardinal, Fixed, Mutable
+- **Main Planets (2)** — Uranus (Traditional style), Pluto (Modern style)
+- **Lunar Symbols (4)** — Solar eclipse (Diagram style), Solar eclipse (Symbolic style), Lunar eclipse (Diagram style), Lunar eclipse (Symbolic style)
+- **Celestial Points (2)** — Wheel of fortune, Vertex
+- **Dwarf Planets & Asteroids (13)** — Ceres, Pallas, Juno, Vesta (Flame symbol), Vesta (Geometric style), Sedna, Makemake, Haumea, Eris (Symbolic style), Eris (Alternative style), Proserpine, Hygiea, Comet
+- **Astrological Houses (2)** — Imum Coeli, Descendant
+- **Planetary Movements (1)** — Direct
+- **Minor Aspects (13)** — Semi-sextile, Inconjunct, Semi-square, Septile, Sesquiquadrate, Quintile (Pentagon style), Quintile (Q-notation style), Biquintile (Letter notation), Biquintile (Geometric style), Novile, Parallel, Contra-parallel, Decile
+- **Classical Elements (4)** — Fire, Air, Earth, Water
+
+</details>
+
+> Several symbols include two distinct design variants: **Capricorn** (Modern + Traditional), **Uranus** (Modern + Traditional), **Pluto** (Traditional + Modern), **Eris** (Symbolic + Alternative), and **Vesta** (Flame + Geometric).
 
 ## Upgrading to Pro
 
 Pro unlocks all **101** symbols plus the complete, installable font families
-(Sans-serif & Slab-serif × Light / Regular / Bold). The easiest way to render astrology charts
+(Sans-serif & Slab-serif × Light / Regular / Bold — 6 variants total). The easiest way to render astrology charts
 is to register the fonts with `@font-face` and type the mapped characters.
+
+Pro adds 46 additional symbols across all 10 categories — including all Minor Aspects, Classical Elements,
+both eclipse variants, extra design variants for Capricorn, Uranus and Pluto, and rare asteroids.
+See the full list in the [Pro symbols section](#categories) above.
 
 Full Pro integration guidance, the character map and live previews:
 **[zodiacfonts.com/documentation](https://www.zodiacfonts.com/documentation)**.
