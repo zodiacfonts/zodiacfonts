@@ -4,7 +4,5 @@
   Free for personal and commercial use with attribution.
 -->
 <svg class="zf-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-      <ellipse  cx="255.991" cy="175.858" rx="111.7" ry="113.976" stroke-miterlimit="10" fill="none" stroke="currentColor" stroke-width="32"/>
-      <line  x1="255.991" y1="450.119" x2="255.991" y2="289.834" fill="none" stroke="currentColor" stroke-width="32" stroke-linecap="round" stroke-linejoin="round"/>
-      <line  x1="181.66" y1="371.66" x2="329.766" y2="371.66" fill="none" stroke="currentColor" stroke-width="32" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M360.28 190.45C360.28 131.88 313.43 84.27 256 84.27C198.57 84.27 151.72 131.88 151.72 190.45C151.72 245.61 193.28 290.95 246.18 295.86L246.18 345.36L193.28 345.36C187.99 345.36 183.46 349.89 183.46 355.18C183.46 360.47 187.99 365.01 193.28 365.01L246.18 365.01L246.18 422.44C246.18 427.73 250.71 432.26 256 432.26C261.29 432.26 265.82 427.73 265.82 422.44L265.82 365.01L318.72 365.01C324.01 365.01 328.54 360.47 328.54 355.18C328.54 349.89 324.01 345.36 318.72 345.36L265.82 345.36L265.82 295.86C318.72 290.95 360.28 245.61 360.28 190.45M171.36 190.45C171.36 142.46 209.53 103.54 256.38 103.54C302.85 103.54 341.01 142.46 341.01 190.07C341.01 237.67 302.85 276.59 256 276.59C209.15 276.59 171.36 237.67 171.36 190.07" fill="currentColor" fill-rule="nonzero"/>
 </svg>

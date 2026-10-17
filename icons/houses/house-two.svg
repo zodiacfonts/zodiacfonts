@@ -4,8 +4,5 @@
   Free for personal and commercial use with attribution.
 -->
 <svg class="zf-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-        <line  x1="228.197" y1="71.508" x2="228.197" y2="445.538" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/>
-        <line  x1="293.895" y1="71.508" x2="293.895" y2="445.538" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/>
-      <line  x1="167.545" y1="66.462" x2="344.455" y2="66.462" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/>
-      <line  x1="167.545" y1="445.538" x2="344.455" y2="445.538" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/>
+  <path d="M289.63 324.20L289.63 102.79L312.30 102.79C317.59 102.79 322.12 98.25 322.12 92.96C322.12 87.67 317.59 83.14 312.30 83.14L199.70 83.14C194.41 83.14 189.88 87.67 189.88 92.96C189.88 98.63 194.41 103.16 199.70 103.16L228.42 103.16L228.42 324.58L199.70 324.58C194.41 324.58 189.88 329.11 189.88 334.40C189.88 339.69 194.41 344.23 199.70 344.23L312.30 344.23C317.59 344.23 322.12 339.69 322.12 334.40C322.12 329.11 317.59 324.58 312.30 324.58M248.07 103.16L270.36 103.16L270.36 324.58L248.07 324.58" fill="currentColor" fill-rule="nonzero"/>
 </svg>

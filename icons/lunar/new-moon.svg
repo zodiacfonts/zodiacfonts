@@ -4,5 +4,5 @@
   Free for personal and commercial use with attribution.
 -->
 <svg class="zf-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-    <circle  cx="256" cy="256" r="189.538" stroke="currentColor" stroke-miterlimit="10" stroke-width="32" fill="currentColor"/>
+  <path d="M256.19 343.85C327.98 343.85 386.17 285.66 386.17 213.87C386.17 142.08 327.98 83.89 256.19 83.89C184.02 83.89 125.83 142.08 125.83 213.87C125.83 286.04 184.02 344.23 255.81 344.23" fill="currentColor" fill-rule="nonzero"/>
 </svg>

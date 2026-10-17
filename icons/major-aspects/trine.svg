@@ -4,5 +4,5 @@
   Free for personal and commercial use with attribution.
 -->
 <svg class="zf-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-    <polygon  points="256 100.293 63.166 411.707 448.834 411.707 256 100.293" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/>
+  <path d="M413.18 326.47L263.93 85.41C260.16 79.74 250.71 79.74 247.31 85.41L98.06 326.47C96.17 329.49 96.17 333.27 98.06 336.29C99.95 339.31 103.35 341.20 106.75 341.20L405.25 341.20C408.65 341.20 412.05 339.31 413.94 336.29C415.83 333.27 415.83 329.49 413.94 326.47M124.51 321.93L256.38 109.21L387.87 321.93" fill="currentColor" fill-rule="nonzero"/>
 </svg>
