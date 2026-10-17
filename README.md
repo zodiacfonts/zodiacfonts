@@ -18,9 +18,11 @@ Zodiac signs, planets, lunar phases, houses, aspects and more — free for perso
 
 > [!NOTE]
 > This repository hosts the **Free tier** (55 SVG symbols) so developers can consume Zodiac
-> Fonts as a dependency. The full collection — 101 symbols across six installable font
+> Fonts as a dependency. The full collection — 127 symbols across six installable font
 > variants — is **Pro**. See **[zodiacfonts.com/documentation](https://www.zodiacfonts.com/documentation)**
 > for the visual reference and Pro integration guide.
+
+**Upgrading from 1.x:** `zf-earth` is now `zf-earth-1`, `zf-capricorn` is `zf-capricorn-2`, `zf-uranus` is `zf-uranus-1`, and `zf-pluto` is `zf-pluto-1`. The SVG filenames changed the same way. Icons are filled shapes, so color comes from `fill`, not `stroke`. See the [changelog](./CHANGELOG.md).
 
 ## Table of contents
 
@@ -40,19 +42,27 @@ Zodiac signs, planets, lunar phases, houses, aspects and more — free for perso
 
 | | Free _(this repo)_ | Pro _(for purchase)_ |
 | --- | --- | --- |
-| Symbols | **55** | **101** |
-| Format | SVG ¹ | SVG, PNG **and** installable fonts |
+| Symbols | **55** | **127** |
+| Format (this package) | SVG ¹ | — _(Pro assets not in this repo)_ |
+| Format (on website) | SVG + PNG download ² | PNG preview only ³ |
 | Font variants | Sans-serif · Regular | Sans + Slab × Light / Regular / Bold (6) |
 | Theming | `currentColor`-ready | `currentColor` + `font-*` |
 | License | SIL OFL 1.1 | Pro extended license (EULA) |
 | Use | Personal **&** commercial | Personal **&** commercial |
 
-> ¹ This repository ships the free symbols as **SVG only**. Free **PNG** rasters are not
-> included here — they are available exclusively via the download dialog on
-> **[zodiacfonts.com](https://www.zodiacfonts.com)**.
+> ¹ **This npm package / repository ships SVG files only** — the 55 free symbols under `icons/`.
+> No PNG rasters are bundled here.
+>
+> ² On **[zodiacfonts.com](https://www.zodiacfonts.com)**, the 55 **free** symbols can be
+> downloaded individually as **PNG or SVG** (overview toast) or in bulk via **ZIP bundles** on the
+> [download page](https://www.zodiacfonts.com/download) (fonts, SVGs, PNGs — free glyphs only).
+>
+> ³ **Pro symbols** (72) are shown as **PNG previews** in the browser. Individual PNG and SVG
+> downloads are locked until Pro purchase and authentication (coming soon). Pro ZIP bundles are
+> not offered yet.
 
-Every SVG is normalized to a `0 0 512 512` viewBox and drawn with
-`fill="none" stroke="currentColor"`, so it inherits color from CSS out of the box.
+Every SVG is a filled outline on a `0 0 512 512` viewBox with
+`fill="currentColor"`, so it inherits color from CSS. `stroke` does not change the icon.
 
 ## Installation
 
@@ -104,7 +114,7 @@ from [`icons/`](./icons).
 <span class="zodiac-icon" role="img" aria-label="Aries">
   <!-- contents of icons/signs/aries.svg -->
   <svg viewBox="0 0 512 512" width="48" height="48">
-    <path d="…" fill="none" stroke="currentColor" stroke-width="32" />
+    <path d="…" fill="currentColor" />
   </svg>
 </span>
 ```
@@ -187,12 +197,12 @@ $zf-font-path: '/assets/zodiacfonts/ZodiacFontFREE.woff2';
 
 ### FREE vs PRO glyphs
 
-The stylesheet ships CSS classes for **all 101 glyphs** — the 55 FREE ones and the 46 PRO stubs.
+The stylesheet ships CSS classes for **all 127 glyphs** — the 55 FREE ones and the 72 PRO stubs.
 FREE classes render immediately. PRO classes (marked `/* PRO */` in the source CSS) require
 a Pro license and `ZodiacFontPRO.woff2` to be self-hosted alongside `ZodiacFontFREE.woff2`.
 
 See [zodiacfonts.com/documentation](https://www.zodiacfonts.com/documentation) for the Pro
-integration guide, character map, and live preview of all 101 glyphs.
+integration guide, character map, and live preview of all 127 glyphs.
 
 ### PRO usage detector
 
@@ -286,29 +296,30 @@ Use [`glyphs.json`](./glyphs.json) to generate pickers, sprites, or typed consta
 import manifest from 'zodiacfonts/glyphs.json' assert { type: 'json' };
 
 for (const g of manifest.glyphs) {
-  // g.name, g.slug, g.reference, g.codepoint, g.file
-  console.log(g.slug, '→', g.file);
+  // g.name, g.reference, g.codepoint, g.file
+  console.log(g.reference, '→', g.file);
 }
 ```
 
-Each entry: `name`, `slug` (filename), `reference` (source id), `codepoint` (Private Use Area
-code point used by the icon font) and `file` (repo path).
+Each entry: `name`, `reference` (icon class `zf-<reference>` and SVG filename), `codepoint`
+(Private Use Area code point used by the icon font) and `file` (repo path).
 
 ## Categories
 
 | Category | Free | Pro | Notes |
 | --- | ---: | ---: | --- |
-| Zodiac Signs | 12 | 5 | Capricorn has two design variants (Modern · Traditional) |
-| Main Planets | 11 | 2 | Uranus & Pluto each have two design variants |
+| Zodiac Signs | 12 | 6 | Capricorn has three drawings (Modern · Traditional · printed form) |
+| Main Planets | 11 | 6 | Earth ×2, Vulcan ×2, Uranus ×2, Pluto ×3 |
 | Lunar Symbols | 8 | 4 | Solar & Lunar eclipse (Diagram + Symbolic styles) |
-| Celestial Points | 3 | 2 | |
-| Dwarf Planets & Asteroids | 1 | 13 | |
+| Celestial Points | 3 | 4 | Includes Part of spirit and East point |
+| Dwarf Planets & Asteroids | 1 | 17 | |
 | Astrological Houses | 14 | 2 | |
 | Major Aspects | 5 | 0 | All free |
-| Minor Aspects | 0 | 13 | |
+| Minor Aspects | 0 | 18 | |
 | Classical Elements | 0 | 4 | |
-| Planetary Movements | 1 | 1 | |
-| **Total** | **55** | **46** | **101 symbols total** |
+| Planetary Movements | 1 | 3 | Direct, Transiting, Progressed |
+| Transneptunian Points | 0 | 8 | Hamburg points: Cupido through Poseidon |
+| **Total** | **55** | **72** | **127 symbols total** |
 
 <details>
 <summary>Full list of free symbols (55)</summary>
@@ -325,30 +336,46 @@ code point used by the icon font) and `file` (repo path).
 </details>
 
 <details>
-<summary>Full list of Pro symbols (46)</summary>
+<summary>Full list of Pro symbols (72)</summary>
 
-- **Zodiac Signs (5)** — Capricorn (Traditional style), Ophiuchus (13th sign), Cardinal, Fixed, Mutable
-- **Main Planets (2)** — Uranus (Traditional style), Pluto (Modern style)
+- **Zodiac Signs (6)** — Capricorn (Traditional style), Capricorn, Ophiuchus (13th sign), Cardinal, Fixed, Mutable
+- **Main Planets (6)** — Earth, Vulcan, Vulcan, Uranus (Traditional style), Pluto (Modern style), Pluto
 - **Lunar Symbols (4)** — Solar eclipse (Diagram style), Solar eclipse (Symbolic style), Lunar eclipse (Diagram style), Lunar eclipse (Symbolic style)
-- **Celestial Points (2)** — Wheel of fortune, Vertex
-- **Dwarf Planets & Asteroids (13)** — Ceres, Pallas, Juno, Vesta (Flame symbol), Vesta (Geometric style), Sedna, Makemake, Haumea, Eris (Symbolic style), Eris (Alternative style), Proserpine, Hygiea, Comet
+- **Celestial Points (4)** — Wheel of fortune, Part of spirit, Vertex, East point
+- **Dwarf Planets & Asteroids (17)** — Ceres, Pallas, Juno, Vesta (Flame symbol), Vesta (Geometric style), Sedna, Makemake, Haumea, Eris (Symbolic style), Eris (Alternative style), Proserpine, Hygiea, Comet, Pholus, Gonggong, Quaoar, Orcus
 - **Astrological Houses (2)** — Imum Coeli, Descendant
-- **Planetary Movements (1)** — Direct
-- **Minor Aspects (13)** — Semi-sextile, Inconjunct, Semi-square, Septile, Sesquiquadrate, Quintile (Pentagon style), Quintile (Q-notation style), Biquintile (Letter notation), Biquintile (Geometric style), Novile, Parallel, Contra-parallel, Decile
+- **Planetary Movements (3)** — Direct, Transiting, Progressed
+- **Minor Aspects (18)** — Semi-sextile, Inconjunct, Semi-square, Septile, Bi-septile, Tri-septile, Sesquiquadrate, Quintile (Pentagon style), Quintile (Q-notation style), Biquintile (Letter notation), Biquintile (Geometric style), Novile, Bi-novile, Quatro-novile, Parallel, Contra-parallel, Decile, Quindecile
 - **Classical Elements (4)** — Fire, Air, Earth, Water
+- **Transneptunian Points (8)** — Cupido, Hades, Zeus, Kronos, Apollon, Admetos, Vulcanus, Poseidon
 
 </details>
 
-> Several symbols include two distinct design variants: **Capricorn** (Modern + Traditional), **Uranus** (Modern + Traditional), **Pluto** (Traditional + Modern), **Eris** (Symbolic + Alternative), and **Vesta** (Flame + Geometric).
+> Several symbols include more than one drawing: **Capricorn** (three), **Earth** (two), **Vulcan** (two), **Uranus** (Modern + Traditional), **Pluto** (three), **Eris** (Symbolic + Alternative), **Vesta** (Flame + Geometric), **Quintile** (two), and **Biquintile** (two).
+
+## Downloads on zodiacfonts.com
+
+This package is for **developers** who want SVG files, CSS/SCSS, or the free icon font in their
+projects. For **end-user downloads** (PNG rasters, ZIP bundles, full font packages), use the
+website:
+
+| What | Free tier (55 symbols) | Pro tier (72 symbols) |
+| --- | --- | --- |
+| Browse / preview | PNG in the gallery | PNG preview only |
+| Individual download | PNG + SVG | Locked until Pro purchase |
+| ZIP bundles | [Download page](https://www.zodiacfonts.com/download) | Coming soon |
+
+The free PNG and SVG ZIP archives contain **only the 55 free glyphs** — Pro assets are never
+included in free bundles.
 
 ## Upgrading to Pro
 
-Pro unlocks all **101** symbols plus the complete, installable font families
+Pro unlocks all **127** symbols plus the complete, installable font families
 (Sans-serif & Slab-serif × Light / Regular / Bold — 6 variants total). The easiest way to render astrology charts
 is to register the fonts with `@font-face` and type the mapped characters.
 
-Pro adds 46 additional symbols across all 10 categories — including all Minor Aspects, Classical Elements,
-both eclipse variants, extra design variants for Capricorn, Uranus and Pluto, and rare asteroids.
+Pro adds 72 additional symbols across all 11 categories — including all Minor Aspects, Classical Elements,
+transneptunian points, both eclipse variants, extra drawings for Capricorn, Earth, Vulcan, Uranus and Pluto, and rare asteroids.
 See the full list in the [Pro symbols section](#categories) above.
 
 Full Pro integration guidance, the character map and live previews:

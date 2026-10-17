@@ -11,8 +11,8 @@
  *   checkZodiacGlyphs();
  */
 
-/** Slugs of all PRO glyphs (generated from glyphs-list.json). */
-const PRO_SLUGS = new Set(["capricorn-1", "ophiuchus", "sign-cardinal", "sign-fixed", "sign-mutable", "uranus-2", "pluto-2", "solar-eclipse-1", "lunar-eclipse-1", "solar-eclipse-2", "lunar-eclipse-2", "wheel-of-fortune", "vertex", "ceres", "pallas", "juno", "vesta-1", "vesta-2", "comet", "sedna", "makemake", "haumea", "proserpine", "hygiea", "eris-1", "eris-2", "imum-coeli", "descendant", "semi-sextile", "inconjunct", "semi-square", "septile", "sesquiquadrate", "quintile-2", "quintile", "biquintile", "biquintile-2", "novile", "parallel", "contra-parallel", "decile", "element-fire", "element-air", "element-earth", "element-water", "direct"]);
+/** References of all PRO glyphs (generated from glyphs-list.json). */
+const PRO_REFERENCES = new Set(["capricorn-1", "ophiuchus", "sign-cardinal", "sign-fixed", "sign-mutable", "capricorn-3", "uranus-2", "pluto-2", "pluto-3", "vulcan-1", "vulcan-2", "earth-2", "solar-eclipse-1", "lunar-eclipse-1", "solar-eclipse-2", "lunar-eclipse-2", "wheel-of-fortune", "vertex", "part-of-spirit", "east-point", "ceres", "pallas", "juno", "vesta-1", "vesta-2", "comet", "sedna", "makemake", "haumea", "proserpine", "hygiea", "eris-1", "eris-2", "pholus", "gonggong", "quaoar", "orcus", "imum-coeli", "descendant", "semi-sextile", "inconjunct", "semi-square", "septile", "sesquiquadrate", "quintile-2", "quintile-1", "biquintile-1", "biquintile-2", "novile", "parallel", "contra-parallel", "decile", "bi-septile", "tri-septile", "bi-novile", "quatro-novile", "quindecile", "element-fire", "element-air", "element-earth", "element-water", "direct", "transiting", "progressed", "cupido", "hades", "zeus", "kronos", "apollon", "admetos", "vulcanus", "poseidon"]);
 const DOCS_URL = 'https://www.zodiacfonts.com/documentation';
 
 /**
@@ -24,7 +24,7 @@ export function checkZodiacGlyphs() {
   if (typeof document === 'undefined') return; // SSR guard
   document.querySelectorAll('.zf').forEach(function (el) {
     el.classList.forEach(function (cls) {
-      if (cls.startsWith('zf-') && PRO_SLUGS.has(cls.slice(3))) {
+      if (cls.startsWith('zf-') && PRO_REFERENCES.has(cls.slice(3))) {
         console.warn(
           '[Zodiac Fonts] PRO glyph detected: .' + cls + '\n' +
           '  This glyph requires a Pro license — it will not render with the FREE font.\n' +

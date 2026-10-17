@@ -4,6 +4,5 @@
   Free for personal and commercial use with attribution.
 -->
 <svg class="zf-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-      <circle  cx="167.532" cy="344.468" r="101.071" stroke-miterlimit="10" fill="none" stroke="currentColor" stroke-width="32"/>
-      <line  x1="445.538" y1="66.462" x2="245.883" y2="266.117" fill="none" stroke="currentColor" stroke-width="32" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M382.86 83.14C379.08 79.36 373.04 79.36 369.26 83.14L244.19 208.20C215.48 185.91 173.91 187.80 147.47 214.25C118.75 243.34 118.75 290.19 147.47 318.91C161.82 333.65 180.72 340.82 199.61 340.82C218.50 340.82 237.39 333.65 251.75 319.29C278.58 292.84 280.47 251.28 258.17 222.18L383.24 97.12C387.02 93.34 387.02 87.30 383.24 83.52M238.15 305.69C216.99 326.84 182.60 326.84 161.45 305.69C140.29 284.53 140.29 250.14 161.45 228.98C182.60 207.83 216.99 207.83 238.15 228.98C259.31 250.14 259.31 284.53 238.15 305.69" fill="currentColor" fill-rule="nonzero"/>
 </svg>

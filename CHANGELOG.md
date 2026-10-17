@@ -6,6 +6,27 @@ Versioning follows [Semantic Versioning](https://semver.org/).
 
 ---
 
+## [2.0.0] — 2026-10-17
+
+### Changed
+
+- The 55 free SVGs are now filled outlines (`fill="currentColor"`). The website uses the same filled drawing for every symbol, free and Pro. This package still contains only the free 55.
+- `fonts/ZodiacFontFREE.woff2` is rebuilt from those outlines.
+- The stylesheet lists 72 Pro class stubs. The free set is still 55 symbols.
+
+### Breaking
+
+- These classes and files were renamed. Update HTML, CSS, and imports:
+
+  - `zf-earth` and `icons/main-planets/earth.svg` → `zf-earth-1` and `earth-1.svg`
+  - `zf-capricorn` and `icons/signs/capricorn.svg` → `zf-capricorn-2` and `capricorn-2.svg`
+  - `zf-uranus` and `icons/main-planets/uranus.svg` → `zf-uranus-1` and `uranus-1.svg`
+  - `zf-pluto` and `icons/main-planets/pluto.svg` → `zf-pluto-1` and `pluto-1.svg`
+
+- `stroke` and `stroke-width` no longer change the icon. Color still comes from `currentColor`, through `fill`.
+
+---
+
 ## [1.1.1] — 2026-06-20
 
 ### Fixed
@@ -48,6 +69,6 @@ Versioning follows [Semantic Versioning](https://semver.org/).
 - 55 free astrology SVG symbols across 8 categories: zodiac signs, main planets,
   lunar phases, celestial points, dwarf planets & asteroids, houses, major aspects,
   and movements.
-- `glyphs.json` — machine-readable manifest with `name`, `slug`, `reference`,
+- `glyphs.json` — machine-readable manifest with `name`, `reference`,
   `codepoint`, and `file` for every symbol.
 - SIL Open Font License 1.1 (`OFL.txt`).

@@ -4,10 +4,5 @@
   Free for personal and commercial use with attribution.
 -->
 <svg class="zf-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-      <line  x1="66.462" y1="445.538" x2="445.538" y2="445.538" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/>
-        <line  x1="298.954" y1="66.462" x2="298.954" y2="440.492" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/>
-        <line  x1="354.56" y1="71.508" x2="354.56" y2="445.538" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/>
-          <line  x1="243.052" y1="77.071" x2="152.566" y2="439.975" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/>
-          <line  x1="162.486" y1="76.702" x2="252.972" y2="439.631" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/>
-      <line  x1="66.462" y1="66.462" x2="445.538" y2="66.462" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/>
+  <path d="M376.53 322.31L328.54 322.31L328.54 100.90L376.53 100.90C381.82 100.90 386.35 96.36 386.35 91.07C386.35 85.41 381.82 80.87 376.53 80.87L135.47 80.87C130.18 80.87 125.65 85.41 125.65 90.70C125.65 95.99 130.18 100.52 135.47 100.52L187.23 100.52L212.17 199.89L181.57 321.93L135.47 321.93C130.18 321.93 125.65 326.47 125.65 331.76C125.65 337.42 130.18 341.96 135.47 341.96L376.53 341.96C381.82 341.96 386.35 337.42 386.35 332.13C386.35 326.84 381.82 322.31 376.53 322.31M308.90 322.31L293.03 322.31L293.03 100.90L308.90 100.90M262.42 322.31L232.20 200.27L257.13 100.52L273.38 100.52L273.38 321.93L262.42 321.93M207.26 100.90L236.73 100.90L221.99 159.84M221.99 240.70L242.40 322.31L201.97 322.31" fill="currentColor" fill-rule="nonzero"/>
 </svg>
