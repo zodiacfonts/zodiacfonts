@@ -55,11 +55,11 @@ Zodiac signs, planets, lunar phases, houses, aspects and more — free for perso
 >
 > ² On **[zodiacfonts.com](https://www.zodiacfonts.com)**, the 55 **free** symbols can be
 > downloaded individually as **PNG or SVG** (overview toast) or in bulk via **ZIP bundles** on the
-> [download page](https://www.zodiacfonts.com/download) (fonts, SVGs, PNGs — free glyphs only).
+> [download page](https://www.zodiacfonts.com/download) (font files, an SVG zip, and one combined zip — free glyphs only).
 >
 > ³ **Pro symbols** (72) are shown as **PNG previews** in the browser. Individual PNG and SVG
-> downloads are locked until Pro purchase and authentication (coming soon). Pro ZIP bundles are
-> not offered yet.
+> downloads stay locked until purchase. Each purchased Pro font is one zip. Purchase is coming
+> soon on the website.
 
 Every SVG is a filled outline on a `0 0 512 512` viewBox with
 `fill="currentColor"`, so it inherits color from CSS. `stroke` does not change the icon.
@@ -171,6 +171,20 @@ import 'zodiacfonts/css';
 
 Or copy `css/zodiac-fonts.min.css` and the `fonts/` folder to your project and link the CSS manually.
 
+### Weight and family
+
+`.zf` is Sans Regular (`Zodiac Fonts`, weight 400). These classes switch weight or family. They do not load a font file. A purchased PRO font file still needs its own `@font-face`.
+
+- `zf-light` sets font-weight 300. `zf-regular` sets 400. `zf-bold` sets 700.
+- `zf-sans` sets the family `Zodiac Fonts`. `zf-slab` sets `Zodiac Slab`.
+- `zf-regular` and `zf-sans` set an element back to Sans Regular when a parent used another weight or Slab.
+
+```html
+<i class="zf zf-ophiuchus zf-bold" aria-hidden="true"></i>
+<i class="zf zf-ophiuchus zf-slab" aria-hidden="true"></i>
+<i class="zf zf-ophiuchus zf-slab zf-bold" aria-hidden="true"></i>
+```
+
 #### Framework notes (icon font)
 
 **Vite-based stacks (React, Vue, Next.js, Nuxt, SvelteKit, etc.)** — the bundler resolves and
@@ -198,16 +212,19 @@ $zf-font-path: '/assets/zodiacfonts/ZodiacFontFREE.woff2';
 ### FREE vs PRO glyphs
 
 The stylesheet ships CSS classes for **all 127 glyphs** — the 55 FREE ones and the 72 PRO stubs.
-FREE classes render immediately. PRO classes (marked `/* PRO */` in the source CSS) require
-a Pro license and `ZodiacFontPRO.woff2` to be self-hosted alongside `ZodiacFontFREE.woff2`.
+FREE classes render with the free font file. PRO classes (marked `/* PRO */` in the source CSS)
+need a purchased PRO font file, registered with `@font-face`. The npm package does not include
+PRO font files. Each file is one family and one weight, for example `ZodiacFontPRO-Regular.woff2`
+or `ZodiacFontPRO-Slab-Bold.woff2`.
 
 See [zodiacfonts.com/documentation](https://www.zodiacfonts.com/documentation) for the Pro
-integration guide, character map, and live preview of all 127 glyphs.
+integration guide and a live preview of all 127 glyphs.
 
 ### PRO usage detector
 
-Include the optional checker script to get a browser console warning whenever a PRO glyph
-class is used without the PRO font loaded. **No code needed** — it runs automatically.
+Because this script does not know which PRO font files were purchased, it warns in the console
+whenever a PRO glyph class is on the page. It does not check whether a PRO font file loaded.
+**No code needed** — it runs automatically.
 
 ```html
 <!-- plain HTML / SSG — add after your CSS link, runs on DOMContentLoaded -->
@@ -232,8 +249,8 @@ When a PRO glyph is detected the console shows:
 
 ```
 [Zodiac Fonts] PRO glyph detected: .zf-ophiuchus
-  This glyph requires a Pro license — it will not render with the FREE font.
-  Self-host ZodiacFontPRO.woff2 after purchasing a Pro license.
+  The free font file does not draw this glyph.
+  A purchased PRO font file needs its own @font-face. This script does not know which files were purchased.
   → https://www.zodiacfonts.com/documentation
 ```
 
@@ -359,26 +376,27 @@ This package is for **developers** who want SVG files, CSS/SCSS, or the free ico
 projects. For **end-user downloads** (PNG rasters, ZIP bundles, full font packages), use the
 website:
 
-| What | Free tier (55 symbols) | Pro tier (72 symbols) |
+| What | Free tier (55 symbols) | Pro font (127 symbols) |
 | --- | --- | --- |
 | Browse / preview | PNG in the gallery | PNG preview only |
-| Individual download | PNG + SVG | Locked until Pro purchase |
-| ZIP bundles | [Download page](https://www.zodiacfonts.com/download) | Coming soon |
+| Individual download | PNG + SVG | PNG and SVG after purchase |
+| ZIP bundles | [Download page](https://www.zodiacfonts.com/download) | One zip per font (coming soon) |
 
-The free PNG and SVG ZIP archives contain **only the 55 free glyphs** — Pro assets are never
-included in free bundles.
+The free ZIP archives contain **only the 55 free glyphs**. PNGs are inside the combined bundle.
+Pro assets are never included in free bundles. Pro font zips stay private until purchase.
 
 ## Upgrading to Pro
 
-Pro unlocks all **127** symbols plus the complete, installable font families
-(Sans-serif & Slab-serif × Light / Regular / Bold — 6 variants total). The easiest way to render astrology charts
-is to register the fonts with `@font-face` and type the mapped characters.
+Pro is all **127** symbols in six fonts: sans-serif and slab-serif, each in light, regular, and bold.
+Each purchased font is one family and one weight. After the zip download, the `.woff2` from
+`fonts/webfonts/` needs its own `@font-face`. The stylesheet classes draw the glyphs.
+`zf-light`, `zf-bold`, and `zf-slab` switch weight or family and do not load a font file.
 
 Pro adds 72 additional symbols across all 11 categories — including all Minor Aspects, Classical Elements,
 transneptunian points, both eclipse variants, extra drawings for Capricorn, Earth, Vulcan, Uranus and Pluto, and rare asteroids.
 See the full list in the [Pro symbols section](#categories) above.
 
-Full Pro integration guidance, the character map and live previews:
+Full Pro integration guidance and live previews:
 **[zodiacfonts.com/documentation](https://www.zodiacfonts.com/documentation)**.
 
 ## License
