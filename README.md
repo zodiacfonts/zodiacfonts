@@ -173,10 +173,10 @@ Or copy `css/zodiac-fonts.min.css` and the `fonts/` folder to your project and l
 
 ### Weight and family
 
-`.zf` is Sans Regular (`Zodiac Fonts`, weight 400). These classes switch weight or family. They do not load a font file. A purchased PRO font file still needs its own `@font-face`.
+`.zf` is Sans Regular (`Zodiac Font Sans`, weight 400). These classes switch weight or family. They do not load a font file. A purchased PRO font file still needs its own `@font-face`.
 
 - `zf-light` sets font-weight 300. `zf-regular` sets 400. `zf-bold` sets 700.
-- `zf-sans` sets the family `Zodiac Fonts`. `zf-slab` sets `Zodiac Slab`.
+- `zf-sans` sets the family `Zodiac Font Sans`. `zf-slab` sets `Zodiac Font Slab`.
 - `zf-regular` and `zf-sans` set an element back to Sans Regular when a parent used another weight or Slab.
 
 ```html

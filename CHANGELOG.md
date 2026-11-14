@@ -6,6 +6,14 @@ Versioning follows [Semantic Versioning](https://semver.org/).
 
 ---
 
+## [2.2.0] — 2026-11-14
+
+### Changed
+
+- The CSS family names are `Zodiac Font Sans` and `Zodiac Font Slab`. `.zf` uses `Zodiac Font Sans`.
+
+---
+
 ## [2.1.0] — 2026-11-14
 
 ### Added
