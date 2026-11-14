@@ -1,10 +1,10 @@
 /*!
- * Zodiac Fonts — free astrology icon font (55 free + 72 PRO stubs)
+ * Zodiac Font Sans — free astrology icon font (55 free + 72 PRO stubs)
  * SIL Open Font License 1.1 · https://www.zodiacfonts.com
  * Generated from glyphs.json — do not edit by hand.
  */
 @font-face {
-  font-family: 'Zodiac Fonts';
+  font-family: 'Zodiac Font Sans';
   src: url('../fonts/ZodiacFontFREE.woff2') format('woff2');
   font-weight: 400;
   font-style: normal;
@@ -13,7 +13,7 @@
 }
 
 .zf {
-  font-family: 'Zodiac Fonts';
+  font-family: 'Zodiac Font Sans';
   font-style: normal;
   font-weight: 400;
   font-variant: normal;
@@ -29,8 +29,8 @@
 .zf-light { font-weight: 300; }
 .zf-regular { font-weight: 400; }
 .zf-bold { font-weight: 700; }
-.zf-sans { font-family: 'Zodiac Fonts'; }
-.zf-slab { font-family: 'Zodiac Slab'; }
+.zf-sans { font-family: 'Zodiac Font Sans'; }
+.zf-slab { font-family: 'Zodiac Font Slab'; }
 
 .zf-aries::before { content: "\e000"; }
 .zf-cancer::before { content: "\e001"; }
