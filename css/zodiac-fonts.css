@@ -24,6 +24,14 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* Weight and family. These classes do not load a font file.
+   .zf is already Sans Regular. Add a class to switch. */
+.zf-light { font-weight: 300; }
+.zf-regular { font-weight: 400; }
+.zf-bold { font-weight: 700; }
+.zf-sans { font-family: 'Zodiac Fonts'; }
+.zf-slab { font-family: 'Zodiac Slab'; }
+
 .zf-aries::before { content: "\e000"; }
 .zf-cancer::before { content: "\e001"; }
 .zf-libra::before { content: "\e002"; }
@@ -88,9 +96,9 @@
 .zf-retrograde::before { content: "\e901"; }
 
 /* ─── PRO glyphs ─────────────────────────────────────────────────────────────
-   These classes are part of the full Zodiac Fonts API. They will NOT render
-   with the free font — the FREE font only covers the 55 codepoints above.
-   To display PRO glyphs, purchase a Pro license and self-host ZodiacFontPRO.woff2.
+   These classes are part of the full Zodiac Fonts API. They do not render
+   with the free font. The free font only covers the 55 codepoints above.
+   A purchased PRO font file needs its own @font-face. The npm package does not include PRO font files.
    → https://www.zodiacfonts.com/documentation
    ─────────────────────────────────────────────────────────────────────────── */
 

@@ -27,8 +27,8 @@ export function checkZodiacGlyphs() {
       if (cls.startsWith('zf-') && PRO_REFERENCES.has(cls.slice(3))) {
         console.warn(
           '[Zodiac Fonts] PRO glyph detected: .' + cls + '\n' +
-          '  This glyph requires a Pro license — it will not render with the FREE font.\n' +
-          '  Self-host ZodiacFontPRO.woff2 after purchasing a Pro license.\n' +
+          '  The free font file does not draw this glyph.\n' +
+          '  A purchased PRO font file needs its own @font-face. This script does not know which files were purchased.\n' +
           '  \u2192 ' + DOCS_URL,
         );
       }

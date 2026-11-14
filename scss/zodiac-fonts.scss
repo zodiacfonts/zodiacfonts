@@ -12,9 +12,11 @@
 // Available variables (all `!default`, override before @use):
 //   $zf-font-path    Path to ZodiacFontFREE.woff2 (default: relative to this file)
 //   $zf-font-family  Font-family name registered with @font-face
+//   $zf-slab-family  Family name used by .zf-slab
 
 $zf-font-path:   '../fonts/ZodiacFontFREE.woff2' !default;
 $zf-font-family: 'Zodiac Fonts' !default;
+$zf-slab-family: 'Zodiac Slab' !default;
 
 @font-face {
   font-family: $zf-font-family;
@@ -36,6 +38,14 @@ $zf-font-family: 'Zodiac Fonts' !default;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+// Weight and family. These classes do not load a font file.
+// .zf is already Sans Regular. Add a class to switch.
+.zf-light { font-weight: 300; }
+.zf-regular { font-weight: 400; }
+.zf-bold { font-weight: 700; }
+.zf-sans { font-family: $zf-font-family; }
+.zf-slab { font-family: $zf-slab-family; }
 
 .zf-aries::before { content: "\e000"; }
 .zf-cancer::before { content: "\e001"; }
@@ -101,8 +111,9 @@ $zf-font-family: 'Zodiac Fonts' !default;
 .zf-retrograde::before { content: "\e901"; }
 
 // ─── PRO glyphs ────────────────────────────────────────────────────────────
-// These classes are part of the full Zodiac Fonts API. They will NOT render
-// with the free font. Purchase a Pro license and self-host ZodiacFontPRO.woff2.
+// These classes are part of the full Zodiac Fonts API. They do not render
+// with the free font. A purchased PRO font file needs its own @font-face.
+// The npm package does not include PRO font files.
 // → https://www.zodiacfonts.com/documentation
 // ──────────────────────────────────────────────────────────────────────────
 

@@ -6,6 +6,20 @@ Versioning follows [Semantic Versioning](https://semver.org/).
 
 ---
 
+## [2.1.0] — 2026-11-14
+
+### Added
+
+- Helper classes on the icon-font stylesheet. They switch weight or family and do not load a font file. `.zf` remains Sans Regular.
+  - `zf-light` is font-weight 300, `zf-regular` is 400, `zf-bold` is 700.
+  - `zf-sans` sets the family `Zodiac Fonts`. `zf-slab` sets `Zodiac Slab`.
+
+### Changed
+
+- The PRO glyph note no longer names `ZodiacFontPRO.woff2`. Each purchased PRO font file needs its own `@font-face`. The npm package does not include those files.
+
+---
+
 ## [2.0.0] — 2026-10-17
 
 ### Changed
