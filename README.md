@@ -223,36 +223,42 @@ integration guide and a live preview of all 127 glyphs.
 ### PRO usage detector
 
 Because this script does not know which PRO font files were purchased, it warns in the console
-whenever a PRO glyph class is on the page. It does not check whether a PRO font file loaded.
-**No code needed** — it runs automatically.
+when a PRO glyph class is on a `.zf` element. It does not check whether a PRO font file loaded.
+The script tag needs no extra code, because the script keeps watching. Glyphs that are in the
+first HTML are reported on load. Glyphs added later are reported when the DOM settles. One
+warning per PRO class for the page.
 
 ```html
-<!-- plain HTML / SSG — add after your CSS link, runs on DOMContentLoaded -->
 <script type="module" src="https://cdn.jsdelivr.net/npm/zodiacfonts@latest/js/zodiac-fonts.min.js"></script>
 ```
 
 ```js
-// SPA (React, Vue, Angular) — call inside your mount lifecycle
-import { checkZodiacGlyphs } from 'zodiacfonts/js';
-
-// React
-useEffect(() => { checkZodiacGlyphs(); }, []);
-
-// Vue
-onMounted(() => checkZodiacGlyphs());
-
-// Angular
-ngOnInit() { checkZodiacGlyphs(); }
+import 'zodiacfonts/js';
 ```
+
+That import belongs at startup. In Angular it belongs in `main.ts`, next to `bootstrapApplication`.
+
+`stopZodiacGlyphs()` from `zodiacfonts/js` disconnects the watcher. After that, `checkZodiacGlyphs()`
+sees only the icons present at the call, so the app calls it after those icons are painted.
 
 When a PRO glyph is detected the console shows:
 
 ```
 [Zodiac Fonts] PRO glyph detected: .zf-ophiuchus
-  The free font file does not draw this glyph.
-  A purchased PRO font file needs its own @font-face. This script does not know which files were purchased.
-  → https://www.zodiacfonts.com/documentation
+  The free font version can not draw this glyph.
+  For more information, visit: → https://www.zodiacfonts.com/documentation
 ```
+
+On each `.zf` element the same check compares every `zf-` class with the glyph names and the five helper classes (`zf-light`, `zf-regular`, `zf-bold`, `zf-sans`, `zf-slab`). Any other `zf-` class prints one note per class name for the page:
+
+```
+[Zodiac Fonts] Unrecognized class on a .zf element: .zf-non-existent-glyph
+  This class is not a glyph or a helper class in this package.
+  If this class belongs to your own stylesheet, you can ignore this note.
+  For more information, visit: → https://www.zodiacfonts.com/documentation
+```
+
+The check looks only at elements that have `.zf`. A `zf-` class on some other element is left alone.
 
 ## Theming with `currentColor`
 
