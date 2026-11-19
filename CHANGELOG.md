@@ -6,6 +6,20 @@ Versioning follows [Semantic Versioning](https://semver.org/).
 
 ---
 
+## [2.3.0] — 2026-11-19
+
+### Added
+
+- The companion script starts a DOM watcher when it loads. Glyphs in the first HTML are reported on load. Glyphs added later are reported when the DOM settles. `stopZodiacGlyphs()` turns the watcher off.
+- The companion script notes an unrecognized `zf-` class on a `.zf` element. A `zf-` class on an element without `.zf` is left alone.
+
+### Changed
+
+- A PRO class and an unrecognized `zf-` class each produce one console note per class name for the page load.
+- The PRO glyph console note says the free font version can not draw the glyph. The documentation line starts with "For more information, visit:".
+
+---
+
 ## [2.2.0] — 2026-11-14
 
 ### Changed
